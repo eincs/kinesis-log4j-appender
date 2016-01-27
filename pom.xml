@@ -20,7 +20,7 @@
 
   <groupId>com.amazonaws</groupId>
   <artifactId>kinesis-log4j-appender</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-eincs-1.0.0</version>
 
   <name>Log4j Appender for pushing logs to Kinesis</name>
   <url>https://github.com/awslabs/kinesis-log4j-appender.git</url>
@@ -40,19 +40,6 @@
           <showWarnings>true</showWarnings>
           <optimize>false</optimize>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>${maven-shade-plugin.version}</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
@@ -74,13 +61,12 @@
 
   <properties>
     <general.encoding>UTF-8</general.encoding>
-    
+
     <!-- JAVA -->
     <java.version>1.7</java.version>
     <java.source.encoding>${general.encoding}</java.source.encoding>
     <aws-java-sdk.version>1.7.0</aws-java-sdk.version>
     <log4j.version>1.2.16</log4j.version>
     <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
-    <maven-shade-plugin.version>2.2</maven-shade-plugin.version>
   </properties>
 </project>
